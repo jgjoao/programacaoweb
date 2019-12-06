@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.node.ArrayNode;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -25,7 +27,7 @@ public class ProductService
 
     @Override
     public Optional<Product> save(Product entity) {
-
+    	
         return Optional.of(productRepository.save(entity));
     }
 
@@ -50,6 +52,16 @@ public class ProductService
     public long count() {
         return productRepository.count();
     }
+
+	public ArrayNode createArrayNode() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object createObjectNode() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 

@@ -17,6 +17,8 @@ public interface ProductRepository
 
     @Query("select p from Product p where p.id in (:lista)")
     public List<Product> listaProdutosPorId(
+    		
+    		
             @Param("lista") List<Integer> lista);
 
     //

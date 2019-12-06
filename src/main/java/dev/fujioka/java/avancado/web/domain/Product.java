@@ -2,6 +2,8 @@ package dev.fujioka.java.avancado.web.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.github.javafaker.Faker;
+
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -9,6 +11,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
@@ -24,7 +27,7 @@ public class Product implements Serializable {
     @NotEmpty
     @Column(length = 150)
     private String name;
-
+  
     private String description;
 
     @Column(nullable = false, updatable = false)
